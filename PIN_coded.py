@@ -38,8 +38,9 @@ def decode_PIN(code):
         else:
             digit = TRANS_TABLE[c][digit]
 
-    if not c is '\n':         # missing '\n' in the last line
-        PIN += str(digit)
+    else:
+        if not c is '\n':         # missing '\n' in the last line
+            PIN += str(digit)
     
     return PIN
 
